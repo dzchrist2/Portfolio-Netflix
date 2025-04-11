@@ -8,6 +8,7 @@ import Skills from './pages/Skills/Skills'
 import Experience from './pages/Experience/Experience'
 import Projects from './pages/Projects/Projects'
 import Contact from './pages/Contact/Contact'
+import Certifications from './pages/Certifications/Certifications';
 
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Route path='/projects' element={<Layout><Projects /></Layout>} />
       <Route path='/contact' element={<Layout><Contact /></Layout>} />
       <Route path='/resume' element={'../../assets/Drew Christner - Resume.pdf'} />
+      <Route path='/certifications' element={<Layout><Certifications /></Layout>} />
     </Routes>
   );
 };
