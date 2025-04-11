@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './NetflixTitle.css';
 import netflixSound from '../../assets/netflixSound.mp3';
 import { useNavigate } from 'react-router-dom';

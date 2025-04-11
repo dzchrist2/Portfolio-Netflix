@@ -2,12 +2,15 @@
   "name": "portfolio-netflix-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://drewzc.me",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -16,6 +19,7 @@
     "@mui/material": "^7.0.2",
     "bootstrap": "^5.3.4",
     "flowbite-react": "^0.11.7",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
