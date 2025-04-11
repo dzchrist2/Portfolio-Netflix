@@ -1,12 +1,11 @@
 {
   "name": "portfolio-netflix-react",
-  "homepage": "https://dzchrist2.github.io/Netflix-Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy" : "npm run build",
