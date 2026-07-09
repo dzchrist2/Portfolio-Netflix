@@ -44,8 +44,7 @@ const ProfileBanner: React.FC = () => {
                 </p>
 
                 <div className="banner-buttons">
-                    {/* <PlayButton onClick={handlePlayClick} label="Resume" /> */}
-                    <PlayButton onClick={onClickUrl("https://bags-nokia-90.ezihost.net")} label="Resume" />
+                    <PlayButton onClick={onClickUrl("/resume.pdf")} label="Resume" />
                     {/* <InfoButton onClick={handleLinkedinClick} label="Linkedin" /> */}
                     <InfoButton onClick={onClickUrl("https://www.linkedin.com/in/drewzc/")} label="Linkedin" />
                 </div>

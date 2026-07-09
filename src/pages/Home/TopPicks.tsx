@@ -2,6 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TopPicks.css';
 import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import skillsCard from '../../assets/cards/skills.svg';
+import experienceCard from '../../assets/cards/experience.svg';
+import certificationsCard from '../../assets/cards/certifications.svg';
+import projectsCard from '../../assets/cards/projects.svg';
+import contactCard from '../../assets/cards/contact.svg';
 
 type ProfileType = 'recruiter' | 'developer';
 
@@ -11,19 +16,18 @@ interface TopPicksProps {
 
 const topPicksConfig = {
     recruiter: [
-        
-        { title: "Skills", imgSrc: "https://picsum.photos/seed/skills/250/200", icon: <FaCode />, route: "/skills" },
-        { title: "Experience", imgSrc: "https://picsum.photos/seed/workexperience/250/200", icon: <FaBriefcase />, route: "/experience" },
-        { title: "Certifications", imgSrc: "https://picsum.photos/seed/certifications/250/200", icon: <FaCertificate />, route: "/certifications" },
-        { title: "Projects", imgSrc: "https://picsum.photos/seed/projects/250/200", icon: <FaProjectDiagram />, route: "/projects" },
-        { title: "Contact Me", imgSrc: "https://picsum.photos/seed/contact/250/200", icon: <FaEnvelope />, route: "/contact-me" },
+        { title: "Skills", imgSrc: skillsCard, icon: <FaCode />, route: "/skills" },
+        { title: "Experience", imgSrc: experienceCard, icon: <FaBriefcase />, route: "/experience" },
+        { title: "Certifications", imgSrc: certificationsCard, icon: <FaCertificate />, route: "/certifications" },
+        { title: "Projects", imgSrc: projectsCard, icon: <FaProjectDiagram />, route: "/projects" },
+        { title: "Contact Me", imgSrc: contactCard, icon: <FaEnvelope />, route: "/contact" },
     ],
     developer: [
-        { title: "Skills", imgSrc: "https://picsum.photos/seed/coding/250/200", route: "/skills", icon: <FaCode /> },
-        { title: "Projects", imgSrc: "https://picsum.photos/seed/development/250/200", route: "/projects", icon: <FaProjectDiagram /> },
-        { title: "Certifications", imgSrc: "https://picsum.photos/seed/badge/250/200", route: "/certifications", icon: <FaCertificate /> },
-        { title: "Experience", imgSrc: "https://picsum.photos/seed/work/250/200", route: "/experience", icon: <FaBriefcase /> },
-        { title: "Contact Me", imgSrc: "https://picsum.photos/seed/connect/250/200", route: "/contact-me", icon: <FaEnvelope /> }
+        { title: "Skills", imgSrc: skillsCard, route: "/skills", icon: <FaCode /> },
+        { title: "Projects", imgSrc: projectsCard, route: "/projects", icon: <FaProjectDiagram /> },
+        { title: "Certifications", imgSrc: certificationsCard, route: "/certifications", icon: <FaCertificate /> },
+        { title: "Experience", imgSrc: experienceCard, route: "/experience", icon: <FaBriefcase /> },
+        { title: "Contact Me", imgSrc: contactCard, route: "/contact", icon: <FaEnvelope /> }
     ]
 };
 

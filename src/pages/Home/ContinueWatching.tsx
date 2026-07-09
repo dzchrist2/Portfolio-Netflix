@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
+import certificationsCard from '../../assets/cards/certifications.svg';
+import contactCard from '../../assets/cards/contact.svg';
 
 type ProfileType = 'recruiter' | 'developer';
 
@@ -10,17 +12,12 @@ interface ContinueWatchingProps {
 
 const continueWatchingConfig = {
     recruiter: [
-        { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-        { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-        { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-        { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+        { title: "Certifications", imgSrc: certificationsCard, link: "/certifications" },
+        { title: "Contact Me", imgSrc: contactCard, link: "/contact" }
     ],
     developer: [
-        { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-        { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-        { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-        { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-        { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+        { title: "Certifications", imgSrc: certificationsCard, link: "/certifications" },
+        { title: "Contact Me", imgSrc: contactCard, link: "/contact" }
     ]
 };
 

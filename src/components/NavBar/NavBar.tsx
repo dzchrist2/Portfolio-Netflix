@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
             <img src={netflixLogo} alt="Netflix Logo" />
             </div>
             <ul>
-            <li><Link to="/browse" onClick={closeSidebar}><FaHome /> Home</Link></li>
-            <li><Link to="/work-experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
+            <li><Link to="/profiles" onClick={closeSidebar}><FaHome /> Home</Link></li>
+            <li><Link to="/experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
             <li><Link to="/skills" onClick={closeSidebar}><FaTools /> Skills</Link></li>
             <li><Link to="/projects" onClick={closeSidebar}><FaProjectDiagram /> Projects</Link></li>
-            <li><Link to="/contact-me" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
+            <li><Link to="/contact" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
             </ul>
         </div>
         </>
