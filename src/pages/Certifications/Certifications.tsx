@@ -3,6 +3,7 @@ import './Certifications.css';
 import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
 import { SiUdemy, SiCoursera, SiIeee } from 'react-icons/si';
 import { HiAcademicCap } from "react-icons/hi2";
+import { usePageTitle } from '../../hooks/usePageTitle';
 const iconData: { [key: string]: JSX.Element } = {
     'school' : <HiAcademicCap />,
     'udemy': <SiUdemy />,
@@ -12,6 +13,7 @@ const iconData: { [key: string]: JSX.Element } = {
 }
 
 const Certifications: React.FC = () => {
+    usePageTitle('Certifications');
 
     const certifications = [
         {

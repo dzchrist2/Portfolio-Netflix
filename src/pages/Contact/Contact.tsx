@@ -2,10 +2,11 @@ import React from 'react';
 import './Contact.css';
 import profilePic from '../../assets/blue_profile.png';
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
+import { usePageTitle } from '../../hooks/usePageTitle';
 
 const ContactMe: React.FC = () => {
+    usePageTitle('Contact');
 
-    
     return (
         <div className="contact-container">
         <div className="linkedin-badge-custom">

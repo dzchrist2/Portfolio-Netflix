@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
 import './NavBar.css';
 import netflixLogo from '../../assets/Full-Logo_Netflix.png';
-import blueImage from '../../assets/blue_profile.png';
+import { getProfile, getStoredProfile } from '../../data/profiles';
 
 const Navbar: React.FC = () => {
-    const location = useLocation();
     const navigate = useNavigate();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const profileImage = location.state?.profileImage || blueImage;
+    const profileImage = getProfile(getStoredProfile()).image;
 
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 80);
@@ -29,6 +28,14 @@ const Navbar: React.FC = () => {
         setIsSidebarOpen(false);
     };
 
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') closeSidebar();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
     return (
         <>
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -46,12 +53,20 @@ const Navbar: React.FC = () => {
             </div>
             <div className="navbar-right">
             {/* Hamburger menu for mobile */}
-                <div className="hamburger" onClick={toggleSidebar}>
+                <button
+                    type="button"
+                    className="hamburger"
+                    onClick={toggleSidebar}
+                    aria-label="Open menu"
+                    aria-expanded={isSidebarOpen}
+                >
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>
-                <img src={profileImage} alt="Profile" className="profile-icon" onClick={() => { navigate('/profiles') }} />
+                </button>
+                <button type="button" className="profile-icon-button" onClick={() => navigate('/profiles')} aria-label="Switch profile">
+                    <img src={profileImage} alt="" className="profile-icon" />
+                </button>
             </div>
         </nav>
 

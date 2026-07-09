@@ -1,30 +1,33 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './Home.css';
 
 import ProfileBanner from './ProfileBanner';
 import TopPicksRow from './TopPicks';
+import { getProfile, setStoredProfile } from '../../data/profiles';
+import { usePageTitle } from '../../hooks/usePageTitle';
 // import ContinueWatching from './ContinueWatching';
-type ProfileType = 'recruiter' | 'developer';
 
 const ProfilePage: React.FC = () => {
-    const location = useLocation();
-    const backgroundGif = location.state?.backgroundGif || "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"; // Default GIF
     const { profileName } = useParams<{ profileName: string }>();
+    const profile = getProfile(profileName);
+    usePageTitle('Home');
 
-    const profile = ['recruiter', 'developer'].includes(profileName!)
-        ? (profileName as ProfileType) : 'recruiter';
+    useEffect(() => {
+        setStoredProfile(profile.name);
+    }, [profile.name]);
+
     return (
         <>
         <div
             className="profile-page"
-            style={{ backgroundImage: `url(${backgroundGif})` }}
+            style={{ backgroundImage: `url(${profile.backgroundGif})` }}
         >
             <ProfileBanner
             />
         </div>
-        <TopPicksRow profile={profile} />
-        {/* <ContinueWatching profile={profile} /> */}
+        <TopPicksRow profile={profile.name} />
+        {/* <ContinueWatching profile={profile.name} /> */}
         </>
     );
 };

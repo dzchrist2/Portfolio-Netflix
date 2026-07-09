@@ -7,6 +7,7 @@ import capsuleNetworkImg from '../../assets/projects/capsule-network.svg';
 import astroSeedImg from '../../assets/projects/astro-seed.svg';
 import eitResearchImg from '../../assets/projects/eit-research.svg';
 import portfolioNetflixImg from '../../assets/projects/portfolio-netflix.svg';
+import { usePageTitle } from '../../hooks/usePageTitle';
 
 const techIcons: { [key: string]: JSX.Element } = {
     "ReactJS": <FaReact />,
@@ -109,6 +110,7 @@ const projectArray: Project[] = [
 ];
 
 const Projects: React.FC = () => {
+    usePageTitle('Projects');
     return (
         <div className="projects-container">
         <div className="projects-grid">
