@@ -6,6 +6,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { MdOutlineWeb, MdOutlineWebStories } from "react-icons/md";
 import { PiFileCSharp } from "react-icons/pi";
 import { usePageTitle } from '../../hooks/usePageTitle';
+import { skillsByCategory } from '../../data/skills';
 
 
 const iconMap: { [key: string]: JSX.Element } = {
@@ -18,24 +19,6 @@ const iconMap: { [key: string]: JSX.Element } = {
     MdOutlineWebStories: <MdOutlineWebStories />,
     FaPython: <FaPython />,
     PiFileCSharp: <PiFileCSharp />
-};
-
-const skillsByCategory = {
-    Domains: [
-        {title: "AI/ML", description: "Modern and Classical AI and Machine Learning Techniques", icon: 'LuBrainCircuit'},
-        {title: "Web-Development", description: "Developing Modern, Dynamic Websites", icon: 'MdOutlineWeb'},
-    ],
-    Frontend: [
-        {title: "HTML & CSS", description: "Web Markup and Styling", icon: 'MdOutlineWebStories'},
-        {title: "JavaScript", description: "Scripting Language", icon: 'FaNodeJs'},
-        {title: "TypeScript", description: "Type-safe Scripting", icon: 'SiTypescript'},
-        {title: "React", description: "Frontend Framework", icon: 'FaReact'}
-    ],
-    Backend: [
-        {title: "Python", description: "Backend Language", icon: 'FaPython'},
-        {title: "Java", description: "Object Oriented Programming", icon: 'FaNodeJs'},
-        {title: "C#", description: "Backend Language", icon: 'PiFileCSharp'}
-    ]
 };
 
 const Skills: React.FC = () => {

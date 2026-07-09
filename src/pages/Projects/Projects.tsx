@@ -3,11 +3,8 @@ import './Projects.css';
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs, FaExternalLinkAlt, FaMicrochip } from 'react-icons/fa';
 import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo, SiTypescript, SiVite, SiTensorflow } from 'react-icons/si';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
-import capsuleNetworkImg from '../../assets/projects/capsule-network.svg';
-import astroSeedImg from '../../assets/projects/astro-seed.svg';
-import eitResearchImg from '../../assets/projects/eit-research.svg';
-import portfolioNetflixImg from '../../assets/projects/portfolio-netflix.svg';
 import { usePageTitle } from '../../hooks/usePageTitle';
+import { projects } from '../../data/projects';
 
 const techIcons: { [key: string]: JSX.Element } = {
     "ReactJS": <FaReact />,
@@ -68,59 +65,18 @@ const techIcons: { [key: string]: JSX.Element } = {
     'JQuery': <SiJquery />,
 };
 
-interface Project {
-    title: string;
-    description: string;
-    image: { url: string };
-    techUsed: string[];
-    githubUrl?: string;
-    liveUrl?: string;
-}
-
-const projectArray: Project[] = [
-    {
-        title: "Capsule Network Research",
-        description: "Independent research project exploring capsule networks as an alternative to CNNs for image classification, evaluating their ability to preserve spatial hierarchies and pose information between features.",
-        image: { url: capsuleNetworkImg },
-        techUsed: ["Python", "TensorFlow"],
-        githubUrl: "https://github.com/dzchrist2",
-    },
-    {
-        title: "Astro Seed — Crop Health Classifier",
-        description: "A machine learning model that classifies crop health from leaf imagery to help identify plant disease early, built as part of an agriculture-tech research effort.",
-        image: { url: astroSeedImg },
-        techUsed: ["Python", "TensorFlow", "PyTorch"],
-        githubUrl: "https://github.com/dzchrist2",
-    },
-    {
-        title: "EIT Research — Arduino Sensing Device",
-        description: "Designed and built an Arduino-based sensing device as part of Electrical Impedance Tomography (EIT) research, handling signal acquisition and low-level firmware.",
-        image: { url: eitResearchImg },
-        techUsed: ["Arduino", "C++", "Python"],
-        githubUrl: "https://github.com/dzchrist2",
-    },
-    {
-        title: "Portfolio-Netflix (This Site)",
-        description: "A Netflix-styled personal portfolio site built with React, TypeScript, and Vite — profile selection, animated landing page, and content pages themed as a streaming catalog.",
-        image: { url: portfolioNetflixImg },
-        techUsed: ["React", "TypeScript", "Vite"],
-        githubUrl: "https://github.com/dzchrist2/Portfolio-Netflix",
-        liveUrl: "https://drewzc.me",
-    },
-];
-
 const Projects: React.FC = () => {
     usePageTitle('Projects');
     return (
         <div className="projects-container">
         <div className="projects-grid">
-            {projectArray.map((project, index) => (
+            {projects.map((project, index) => (
             <div
                 key={project.title}
                 className="project-card"
                 style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
             >
-                <img src={project.image.url} alt={project.title} className="project-image" />
+                <img src={project.image} alt={project.title} className="project-image" />
                 <div className="project-details">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
