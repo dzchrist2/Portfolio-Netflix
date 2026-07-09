@@ -34,4 +34,5 @@ export interface BannerContent {
     description: string;
     resumeUrl: string;
     linkedinUrl: string;
+    githubUrl?: string;
 }

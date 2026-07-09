@@ -7,8 +7,7 @@ import experienceCard from '../../assets/cards/experience.svg';
 import certificationsCard from '../../assets/cards/certifications.svg';
 import projectsCard from '../../assets/cards/projects.svg';
 import contactCard from '../../assets/cards/contact.svg';
-
-type ProfileType = 'recruiter' | 'developer';
+import { ProfileType } from '../../data/profiles';
 
 interface TopPicksProps {
     profile: ProfileType;
@@ -16,18 +15,18 @@ interface TopPicksProps {
 
 const topPicksConfig = {
     recruiter: [
-        { title: "Skills", imgSrc: skillsCard, icon: <FaCode />, route: "/skills" },
-        { title: "Experience", imgSrc: experienceCard, icon: <FaBriefcase />, route: "/experience" },
-        { title: "Certifications", imgSrc: certificationsCard, icon: <FaCertificate />, route: "/certifications" },
-        { title: "Projects", imgSrc: projectsCard, icon: <FaProjectDiagram />, route: "/projects" },
-        { title: "Contact Me", imgSrc: contactCard, icon: <FaEnvelope />, route: "/contact" },
+        { title: "Skills", subtitle: "Technologies I bring to a team", imgSrc: skillsCard, icon: <FaCode />, route: "/skills" },
+        { title: "Experience", subtitle: "Roles, impact, and results", imgSrc: experienceCard, icon: <FaBriefcase />, route: "/experience" },
+        { title: "Certifications", subtitle: "Verified credentials", imgSrc: certificationsCard, icon: <FaCertificate />, route: "/certifications" },
+        { title: "Projects", subtitle: "Shipped, production-facing work", imgSrc: projectsCard, icon: <FaProjectDiagram />, route: "/projects" },
+        { title: "Contact Me", subtitle: "Let's talk about a role", imgSrc: contactCard, icon: <FaEnvelope />, route: "/contact" },
     ],
     developer: [
-        { title: "Skills", imgSrc: skillsCard, route: "/skills", icon: <FaCode /> },
-        { title: "Projects", imgSrc: projectsCard, route: "/projects", icon: <FaProjectDiagram /> },
-        { title: "Certifications", imgSrc: certificationsCard, route: "/certifications", icon: <FaCertificate /> },
-        { title: "Experience", imgSrc: experienceCard, route: "/experience", icon: <FaBriefcase /> },
-        { title: "Contact Me", imgSrc: contactCard, route: "/contact", icon: <FaEnvelope /> }
+        { title: "Skills", subtitle: "Languages, frameworks, tools", imgSrc: skillsCard, route: "/skills", icon: <FaCode /> },
+        { title: "Projects", subtitle: "Code, repos, and write-ups", imgSrc: projectsCard, route: "/projects", icon: <FaProjectDiagram /> },
+        { title: "Certifications", subtitle: "Coursework and credentials", imgSrc: certificationsCard, route: "/certifications", icon: <FaCertificate /> },
+        { title: "Experience", subtitle: "Where I've built things", imgSrc: experienceCard, route: "/experience", icon: <FaBriefcase /> },
+        { title: "Contact Me", subtitle: "Open an issue, or just say hi", imgSrc: contactCard, route: "/contact", icon: <FaEnvelope /> }
     ]
 };
 
@@ -50,6 +49,7 @@ const TopPicksRow: React.FC<TopPicksProps> = ({ profile }) => {
                         <img src={pick.imgSrc} alt={pick.title} className="pick-image" />
                         <div className="overlay">
                             <div className="pick-label">{pick.title}</div>
+                            <div className="pick-subtitle">{pick.subtitle}</div>
                         </div>
                     </div>
                     ))}

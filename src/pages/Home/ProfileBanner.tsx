@@ -1,9 +1,15 @@
 import './ProfileBanner.css';
 import PlayButton from '../../components/PlayButton/PlayButton';
 import InfoButton from '../../components/InfoButton/InfoButton';
-import { banner } from '../../data/banner';
+import { banners } from '../../data/banner';
+import { ProfileType } from '../../data/profiles';
 
-const ProfileBanner: React.FC = () => {
+interface ProfileBannerProps {
+    profile: ProfileType;
+}
+
+const ProfileBanner: React.FC<ProfileBannerProps> = ({ profile }) => {
+    const banner = banners[profile];
 
     const openInNewTab = (url: string): void => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -20,8 +26,17 @@ const ProfileBanner: React.FC = () => {
                 </p>
 
                 <div className="banner-buttons">
-                    <PlayButton onClick={onClickUrl(banner.resumeUrl)} label="Resume" />
-                    <InfoButton onClick={onClickUrl(banner.linkedinUrl)} label="Linkedin" />
+                    {profile === 'developer' && banner.githubUrl ? (
+                        <>
+                            <PlayButton onClick={onClickUrl(banner.githubUrl)} label="GitHub" />
+                            <InfoButton onClick={onClickUrl(banner.resumeUrl)} label="Resume" />
+                        </>
+                    ) : (
+                        <>
+                            <PlayButton onClick={onClickUrl(banner.resumeUrl)} label="Resume" />
+                            <InfoButton onClick={onClickUrl(banner.linkedinUrl)} label="Linkedin" />
+                        </>
+                    )}
                 </div>
             </div>
         </div>
