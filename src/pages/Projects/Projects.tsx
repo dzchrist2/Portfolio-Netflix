@@ -1,7 +1,7 @@
 import React, {JSX} from 'react';
 import './Projects.css';
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs, FaExternalLinkAlt, FaMicrochip } from 'react-icons/fa';
-import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo, SiTypescript, SiVite, SiTensorflow } from 'react-icons/si';
+import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo, SiTypescript, SiVite, SiTensorflow, SiCplusplus } from 'react-icons/si';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
 import { usePageTitle } from '../../hooks/usePageTitle';
 import { projects } from '../../data/projects';
@@ -44,7 +44,7 @@ const techIcons: { [key: string]: JSX.Element } = {
     'TensorFlow': <SiTensorflow />,
     'PyTorch': <SiTensorflow />,
     'Arduino': <FaMicrochip />,
-    'C++': <FaDatabase />,
+    'C++': <SiCplusplus />,
     'Node.js': <FaNodeJs />,
     'Express.js': <FaNodeJs />,
     'Hibernate': <FaJava />,

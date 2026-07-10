@@ -5,13 +5,13 @@
     ],
     "Frontend": [
         { "title": "HTML & CSS", "description": "Web Markup and Styling", "icon": "MdOutlineWebStories" },
-        { "title": "JavaScript", "description": "Scripting Language", "icon": "FaNodeJs" },
+        { "title": "JavaScript", "description": "Scripting Language", "icon": "SiJavascript" },
         { "title": "TypeScript", "description": "Type-safe Scripting", "icon": "SiTypescript" },
         { "title": "React", "description": "Frontend Framework", "icon": "FaReact" }
     ],
     "Backend": [
         { "title": "Python", "description": "Backend Language", "icon": "FaPython" },
-        { "title": "Java", "description": "Object Oriented Programming", "icon": "FaNodeJs" },
+        { "title": "Java", "description": "Object Oriented Programming", "icon": "FaJava" },
         { "title": "C#", "description": "Backend Language", "icon": "PiFileCSharp" }
     ]
 }

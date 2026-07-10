@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import './Skills.css';
 import { FaReact, FaNodeJs, FaPython, FaJava } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
+import { SiTypescript, SiJavascript } from 'react-icons/si';
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdOutlineWeb, MdOutlineWebStories } from "react-icons/md";
 import { PiFileCSharp } from "react-icons/pi";
@@ -14,6 +14,7 @@ const iconMap: { [key: string]: JSX.Element } = {
     FaJava: <FaJava />,
     FaReact: <FaReact />,
     SiTypescript: <SiTypescript />,
+    SiJavascript: <SiJavascript />,
     LuBrainCircuit: <LuBrainCircuit />,
     MdOutlineWeb: <MdOutlineWeb />,
     MdOutlineWebStories: <MdOutlineWebStories />,
