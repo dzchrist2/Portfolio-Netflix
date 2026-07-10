@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# Portfolio-Netflix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio site styled as a Netflix profile browser. Visitors pick a "profile" (recruiter or developer) and get a tailored home page, banner CTAs, and content ordering for that audience.
 
-Currently, two official plugins are available:
+Live site: https://drewzc.me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+- React 19 + TypeScript, built with Vite
+- React Router (route-based code splitting via `React.lazy`)
+- Plain CSS per component (no CSS framework)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Development
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev       # start dev server with HMR
+npm run build     # type-check + production build to dist/
+npm run lint      # ESLint
+npm run preview   # preview the production build locally
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Architecture
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/data/*.ts` — all site content (skills, experience, projects, certifications, banner copy, profile definitions). Components import from here rather than hard-coding content, so content changes don't touch component code.
+- `src/data/profiles.ts` — the two profiles (`recruiter` | `developer`), persisted to `localStorage` so a refresh keeps the selected profile. `banner.ts` and `TopPicks.tsx` key their content off `ProfileType` to vary copy/CTAs/ordering per profile.
+- `src/pages/` — one folder per route, each with its own CSS.
+- `src/components/` — shared UI (nav bar, profile card, buttons).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Deploy
+
+Deploys to GitHub Pages automatically via `.github/workflows/deploy.yml` on every push to `main` — no manual `gh-pages` step. The workflow builds with `npm run build` and publishes `dist/` through the `actions/deploy-pages` action.
+
+## Known open items
+
+- No CMS yet — content lives in `src/data/*.ts` and changes require a code commit.
+- `Projects.tsx` has a couple of placeholder `githubUrl`s pointing at the GitHub profile rather than the specific repo, and a cosmetic icon mismatch for the C++ tech tag.
+- No accessibility (Lighthouse/axe) audit has been run yet.

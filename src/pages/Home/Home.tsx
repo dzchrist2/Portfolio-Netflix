@@ -6,7 +6,6 @@ import ProfileBanner from './ProfileBanner';
 import TopPicksRow from './TopPicks';
 import { getProfile, setStoredProfile } from '../../data/profiles';
 import { usePageTitle } from '../../hooks/usePageTitle';
-// import ContinueWatching from './ContinueWatching';
 
 const ProfilePage: React.FC = () => {
     const { profileName } = useParams<{ profileName: string }>();
@@ -26,7 +25,6 @@ const ProfilePage: React.FC = () => {
             <ProfileBanner profile={profile.name} />
         </div>
         <TopPicksRow profile={profile.name} />
-        {/* <ContinueWatching profile={profile.name} /> */}
         </>
     );
 };

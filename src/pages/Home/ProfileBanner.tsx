@@ -1,4 +1,5 @@
 import './ProfileBanner.css';
+import { FaGithub } from 'react-icons/fa';
 import PlayButton from '../../components/PlayButton/PlayButton';
 import InfoButton from '../../components/InfoButton/InfoButton';
 import { banners } from '../../data/banner';
@@ -28,7 +29,7 @@ const ProfileBanner: React.FC<ProfileBannerProps> = ({ profile }) => {
                 <div className="banner-buttons">
                     {profile === 'developer' && banner.githubUrl ? (
                         <>
-                            <PlayButton onClick={onClickUrl(banner.githubUrl)} label="GitHub" />
+                            <PlayButton onClick={onClickUrl(banner.githubUrl)} label="GitHub" icon={<FaGithub size={24} color="black" />} />
                             <InfoButton onClick={onClickUrl(banner.resumeUrl)} label="Resume" />
                         </>
                     ) : (

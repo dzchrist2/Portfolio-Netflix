@@ -1,18 +1,5 @@
 import { BannerContent } from '../types';
 import { ProfileType } from './profiles';
+import raw from '../content/banner.json';
 
-export const banners: Record<ProfileType, BannerContent> = {
-    recruiter: {
-        headline: "Drew Christner",
-        description: "Results-driven software developer with a computer science degree from Barrett Honors College at Arizona State University. Delivers full stack web applications, ML, and AI solutions from concept to production. Looking for a team building cutting-edge products in AI, data science, or web development where I can make an immediate impact.",
-        resumeUrl: "/resume.pdf",
-        linkedinUrl: "https://www.linkedin.com/in/drewzc/",
-    },
-    developer: {
-        headline: "Drew Christner",
-        description: "Full stack developer working across React/TypeScript, Python, and ML tooling. Recent CS graduate from Barrett Honors College at Arizona State University, currently building and shipping side projects in web development, machine learning, and AI. Code, experiments, and write-ups live on GitHub.",
-        resumeUrl: "/resume.pdf",
-        linkedinUrl: "https://www.linkedin.com/in/drewzc/",
-        githubUrl: "https://github.com/dzchrist2",
-    },
-};
+export const banners: Record<ProfileType, BannerContent> = raw;
