@@ -122,6 +122,13 @@
     text-decoration: underline;
 }
 
+.contact-reveal-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .contact-fun {
     margin-top: 30px;
     font-size: 1.2rem;

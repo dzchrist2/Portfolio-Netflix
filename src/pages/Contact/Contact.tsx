@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
 import { usePageTitle } from '../../hooks/usePageTitle';
@@ -9,9 +9,13 @@ const badgeCopy = {
     developer: "Full stack developer working across React/TypeScript, Python, and ML tooling. Code, experiments, and write-ups live on GitHub.",
 };
 
+const PHONE_DIGITS = '6023004452';
+const PHONE_DISPLAY = '602-300-4452';
+
 const ContactMe: React.FC = () => {
     usePageTitle('Contact');
     const profile = getProfile(getStoredProfile());
+    const [phoneRevealed, setPhoneRevealed] = useState(false);
 
     return (
         <div className="contact-container">
@@ -46,9 +50,19 @@ const ContactMe: React.FC = () => {
             </div>
             <div className="contact-item">
                 <FaPhoneAlt className="contact-icon" />
-                <a href={`tel:602-300-4452`} className="contact-link">
-                    602-300-4452
-                </a>
+                {phoneRevealed ? (
+                    <a href={`tel:${PHONE_DIGITS}`} className="contact-link">
+                        {PHONE_DISPLAY}
+                    </a>
+                ) : (
+                    <button
+                        type="button"
+                        className="contact-link contact-reveal-btn"
+                        onClick={() => setPhoneRevealed(true)}
+                    >
+                        Click to reveal phone number
+                    </button>
+                )}
             </div>
         </div>
         </div>

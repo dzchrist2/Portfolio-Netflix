@@ -24,9 +24,28 @@ flex-shrink: 0;
 border-radius: 8px;
 overflow: hidden;
 cursor: pointer;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s 0.3s;
 animation: slideIn 0.5s ease forwards;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (hover: hover) {
+.pick-card:hover {
+    transition-delay: 0.5s;
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5); /* Netflix red glow on hover */
+}
+
+.pick-card:hover .pick-image {
+    transition-delay: 0.5s;
+    transform: scale(1.1);
+}
+
+.pick-card:hover .overlay {
+    transition-delay: 0.5s;
+    opacity: 1;
+}
 }
 
 @media (max-width: 768px) {
@@ -49,21 +68,11 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 }
 
-.pick-card:hover {
-transform: scale(1.05);
-cursor: pointer;
-box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5); /* Netflix red glow on hover */
-}
-
 .pick-image {
 width: 100%;
 height: 100%;
 object-fit: cover;
 transition: transform 0.3s ease;
-}
-
-.pick-card:hover .pick-image {
-transform: scale(1.1);
 }
 
 .overlay {
@@ -84,8 +93,9 @@ opacity: 0;
 transition: opacity 0.3s ease;
 }
 
-.pick-card:hover .overlay {
-opacity: 1;
+.pick-play-icon {
+color: #fff;
+font-size: 1.8rem;
 }
 
 .pick-label {

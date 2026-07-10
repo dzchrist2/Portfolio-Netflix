@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TopPicks.css';
-import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope, FaPlayCircle } from 'react-icons/fa';
 import skillsCard from '../../assets/cards/skills.svg';
 import experienceCard from '../../assets/cards/experience.svg';
 import certificationsCard from '../../assets/cards/certifications.svg';
@@ -48,6 +48,7 @@ const TopPicksRow: React.FC<TopPicksProps> = ({ profile }) => {
                     >
                         <img src={pick.imgSrc} alt={pick.title} className="pick-image" />
                         <div className="overlay">
+                            <FaPlayCircle className="pick-play-icon" aria-hidden="true" />
                             <div className="pick-label">{pick.title}</div>
                             <div className="pick-subtitle">{pick.subtitle}</div>
                         </div>
