@@ -8,6 +8,7 @@ font-size: 2rem;
 color: #fff;
 margin-bottom: 20px;
 animation: fadeIn 1s ease-in-out;
+text-transform: capitalize;
 }
 
 .card-row {
