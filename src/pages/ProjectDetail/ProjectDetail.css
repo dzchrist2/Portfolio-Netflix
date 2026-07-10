@@ -1,0 +1,116 @@
+.project-detail-container {
+    background-color: #141414;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.project-detail-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 240px;
+    overflow: hidden;
+}
+
+.project-detail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-detail-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0.2) 60%, rgba(20, 20, 20, 0.6) 100%);
+}
+
+.project-detail-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.project-detail-back {
+    display: inline-block;
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-detail-back:hover,
+.project-detail-back:focus-visible {
+    text-decoration: underline;
+}
+
+.project-detail-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin-bottom: 20px;
+}
+
+.project-detail-cast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.project-detail-synopsis {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d2d2d2;
+    margin-bottom: 30px;
+}
+
+.project-detail-links {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.project-detail-more-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.project-detail-more-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.project-detail-more-card {
+    flex: 0 0 auto;
+    width: 200px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1e1e1e;
+    transition: transform 0.2s ease;
+}
+
+.project-detail-more-card:hover,
+.project-detail-more-card:focus-visible {
+    transform: scale(1.05);
+}
+
+.project-detail-more-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-detail-more-card span {
+    display: block;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .project-detail-body {
+        padding: 24px 16px 60px;
+    }
+}

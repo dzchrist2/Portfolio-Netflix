@@ -1,28 +1,36 @@
 [
     {
+        "slug": "capsule-network-research",
         "title": "Capsule Network Research",
         "description": "Independent research project exploring capsule networks as an alternative to CNNs for image classification, evaluating their ability to preserve spatial hierarchies and pose information between features.",
+        "longDescription": "Independent research project exploring capsule networks as an alternative to convolutional neural networks for image classification. Capsule networks encode both the presence and the pose (position, orientation, scale) of a feature, using dynamic routing-by-agreement between capsule layers instead of max-pooling. The project implemented a capsule network in TensorFlow, benchmarked it against a comparable CNN on the same dataset, and evaluated how well each preserved spatial hierarchies between parts and wholes under viewpoint changes.",
         "imageKey": "capsuleNetwork",
         "techUsed": ["Python", "TensorFlow"],
         "githubUrl": "https://github.com/dzchrist2"
     },
     {
+        "slug": "astro-seed-crop-health-classifier",
         "title": "Astro Seed — Crop Health Classifier",
         "description": "A machine learning model that classifies crop health from leaf imagery to help identify plant disease early, built as part of an agriculture-tech research effort.",
+        "longDescription": "A machine learning model that classifies crop health from leaf imagery to help identify plant disease early, built as part of an agriculture-tech research effort. The model was trained on labeled leaf-image datasets and evaluated across multiple architectures (built in both TensorFlow and PyTorch) to compare accuracy and inference speed trade-offs for a future field-deployable, low-power classifier.",
         "imageKey": "astroSeed",
         "techUsed": ["Python", "TensorFlow", "PyTorch"],
         "githubUrl": "https://github.com/dzchrist2"
     },
     {
+        "slug": "eit-research-arduino-sensing-device",
         "title": "EIT Research — Arduino Sensing Device",
         "description": "Designed and built an Arduino-based sensing device as part of Electrical Impedance Tomography (EIT) research, handling signal acquisition and low-level firmware.",
+        "longDescription": "Designed and built an Arduino-based sensing device as part of Electrical Impedance Tomography (EIT) research. Work spanned the full stack of the device: analog signal acquisition circuitry, low-level C++ firmware for driving electrode arrays and sampling voltage, and a Python-based host-side pipeline for reconstructing impedance data into images.",
         "imageKey": "eitResearch",
         "techUsed": ["Arduino", "C++", "Python"],
         "githubUrl": "https://github.com/dzchrist2"
     },
     {
+        "slug": "portfolio-netflix",
         "title": "Portfolio-Netflix (This Site)",
         "description": "A Netflix-styled personal portfolio site built with React, TypeScript, and Vite — profile selection, animated landing page, and content pages themed as a streaming catalog.",
+        "longDescription": "A Netflix-styled personal portfolio site built with React, TypeScript, and Vite. Visitors pick a \"profile\" (recruiter or developer) the way you'd pick a Netflix profile, and the rest of the site — banner copy, project ordering, calls to action — adapts to that audience. Content lives in a typed JSON data layer decoupled from the components, deployed automatically to GitHub Pages via GitHub Actions on every push to main.",
         "imageKey": "portfolioNetflix",
         "techUsed": ["React", "TypeScript", "Vite"],
         "githubUrl": "https://github.com/dzchrist2/Portfolio-Netflix",
