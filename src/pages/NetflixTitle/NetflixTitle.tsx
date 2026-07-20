@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './NetflixTitle.css';
 import netflixSound from '../../assets/netflixSound.mp3';
 import { useNavigate } from 'react-router-dom';
-import logoImage from '../../assets/Full-Logo_Netflix.png'; // Update with the path to your logo
+import BrandLogo from '../../components/BrandLogo/BrandLogo';
 
 const prefersReducedMotion = () =>
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -40,12 +40,13 @@ const NetflixTitle = () => {
             tabIndex={0}
             aria-label="Enter site"
         >
-            <img
-                src={logoImage}
-                alt="Custom Logo"
+            <BrandLogo
+                size="hero"
                 className={`netflix-logo ${isClicked ? 'animate' : ''}`}
-                onAnimationEnd={() => {
-                    if (isClicked) navigate('/profiles');
+                onAnimationEnd={(event) => {
+                    if (isClicked && event.animationName === 'zoomOut') {
+                        navigate('/profiles');
+                    }
                 }}
             />
             {!isClicked && <p className="netflix-hint">Click anywhere to begin</p>}

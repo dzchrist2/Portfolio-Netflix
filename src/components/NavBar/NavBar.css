@@ -24,10 +24,17 @@ display: flex;
 align-items: center;
 }
 
-.navbar-logo img {
-height: 30px;
+.navbar-logo {
 margin-right: 30px;
-margin-top: 5px;
+margin-top: 2px;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+}
+
+.navbar-logo:focus-visible {
+outline: 2px solid #e50914;
+outline-offset: 4px;
 }
 
 /* Navbar Links */
@@ -87,8 +94,7 @@ padding: 0;
 
 /* Mobile-specific styling */
 @media (max-width: 768px) {
-.navbar-logo img {
-    height: 20px;
+.navbar-logo {
     margin-right: auto;
 }
 .profile-icon {
@@ -154,8 +160,7 @@ padding: 0;
     transform: translateX(0);
 }
 
-.sidebar-logo img {
-    height: 30px;
+.sidebar-logo {
     margin-bottom: 20px;
 }
 

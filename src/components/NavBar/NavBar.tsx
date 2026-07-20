@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
+import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import './NavBar.css';
-import netflixLogo from '../../assets/Full-Logo_Netflix.png';
+import BrandLogo from '../BrandLogo/BrandLogo';
 import { getProfile, getStoredProfile } from '../../data/profiles';
 
 const Navbar: React.FC = () => {
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-left">
             <Link to="/" className="navbar-logo">
-                <img src={netflixLogo} alt="Netflix" />
+                <BrandLogo size="nav" />
             </Link>
             <ul className="navbar-links">
                 <li><Link to="/profiles">Home</Link></li>
@@ -52,7 +52,6 @@ const Navbar: React.FC = () => {
             </ul>
             </div>
             <div className="navbar-right">
-            {/* Hamburger menu for mobile */}
                 <button
                     type="button"
                     className="hamburger"
@@ -70,13 +69,11 @@ const Navbar: React.FC = () => {
             </div>
         </nav>
 
-        {/* Sidebar Overlay */}
         <div className={`sidebar-overlay ${isSidebarOpen ? 'open' : ''}`} onClick={closeSidebar}></div>
 
-        {/* Sidebar (only visible on mobile) */}
         <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
             <div className="sidebar-logo">
-            <img src={netflixLogo} alt="Netflix Logo" />
+                <BrandLogo size="nav" />
             </div>
             <ul>
             <li><Link to="/profiles" onClick={closeSidebar}><FaHome /> Home</Link></li>
