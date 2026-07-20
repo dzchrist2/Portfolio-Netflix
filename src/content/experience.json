@@ -1,13 +1,37 @@
 [
     {
-        "name": "Cast Member Intern",
-        "title": "Disney College Program",
+        "name": "Founding Full Stack Developer",
+        "title": "OViiE AI Inc.",
         "timelineType": "work",
-        "dateRange": "May 2025 - Present",
+        "dateRange": "February 2026 - Present",
         "summaryPoints": [
-            "Delivered frontline guest service in a high-volume, fast-paced operations role, staying composed and solutions-oriented under pressure.",
-            "Collaborated with a large, rotating team across shifts to keep operations running smoothly and guest experience consistent.",
-            "Practiced clear communication and quick problem-solving in a customer-facing environment with zero tolerance for downtime."
+            "Founding engineer building STELLA, an AI-powered hospitality platform that integrates with existing hotel infrastructure to improve staff productivity and enable multilingual guest communication.",
+            "Owned end-to-end product development—frontend design and UI/UX, backend and database management, data handling, security, feature delivery, QA, and CI/CD—taking the product from concept to production-ready software.",
+            "Built and shipped on a modern stack including React, Node.js, Supabase, AWS, LiveKit, and Google Cloud Platform, establishing reliable deployment and quality processes for a fast-moving startup environment."
+        ]
+    },
+    {
+        "name": "Minnie Van Service Ride Associate",
+        "title": "The Walt Disney Company",
+        "timelineType": "work",
+        "dateRange": "October 2025 - Present",
+        "summaryPoints": [
+            "Extended from the Disney College Program into Minnie Van Service, Disney’s premium on-property transportation offering top-tier hospitality to park guests.",
+            "Delivered safe, courteous luxury transportation across Disney property while providing elevated customer service and guest entertainment throughout each ride.",
+            "Partnered with a small team to manage extremely high ride volume, contributing to a record number of ride requests fulfilled in a single day.",
+            "Built strong interpersonal and teamwork skills by connecting with guests of all ages from around the world."
+        ]
+    },
+    {
+        "name": "Trainer",
+        "title": "The Walt Disney Company",
+        "timelineType": "work",
+        "dateRange": "May 2025 - October 2025",
+        "summaryPoints": [
+            "Created exceptional dining experiences at Backlot Express, Dockside Diner, and Epic Eatery in Disney’s Hollywood Studios, serving thousands of guests daily in a high-volume quick-service environment.",
+            "Trained incoming cast members on safe job performance and Disney’s Five Keys, using leadership and communication skills to help new hires excel in their roles.",
+            "Earned 16 official recognitions from guests and fellow cast members for outstanding service and teamwork.",
+            "Collaborated with a team of over 100 cast members to serve tens of thousands of guests while upholding strict food safety, kitchen cleanliness, and allergy-friendly standards."
         ]
     },
     {
