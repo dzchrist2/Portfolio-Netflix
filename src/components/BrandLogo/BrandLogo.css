@@ -1,13 +1,26 @@
 .brand-logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
   font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 400;
   color: #e50914;
-  letter-spacing: 0.04em;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
   user-select: none;
+}
+
+.brand-logo__char {
+  display: inline-block;
+  /* Pull letters tight like the Netflix wordmark */
+  margin-inline: -0.035em;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+.brand-logo__char--space {
+  margin-inline: 0.08em;
 }
 
 .brand-logo--nav {
@@ -16,8 +29,15 @@
 
 .brand-logo--hero {
   font-size: clamp(3.5rem, 12vw, 7.5rem);
-  letter-spacing: 0.06em;
   text-shadow: 0 2px 24px rgba(229, 9, 20, 0.35);
+}
+
+.brand-logo--hero .brand-logo__char {
+  margin-inline: -0.045em;
+}
+
+.brand-logo--hero .brand-logo__char--space {
+  margin-inline: 0.1em;
 }
 
 @media (max-width: 768px) {
