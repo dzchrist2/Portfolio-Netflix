@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TopPicks.css';
 import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope, FaPlayCircle } from 'react-icons/fa';
-import skillsCard from '../../assets/cards/skills.svg';
+import skillsCard from '../../assets/cards/skills.png';
 import experienceCard from '../../assets/cards/experience.svg';
 import certificationsCard from '../../assets/cards/certifications.svg';
 import projectsCard from '../../assets/cards/projects.svg';
