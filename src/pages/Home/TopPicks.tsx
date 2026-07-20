@@ -5,7 +5,7 @@ import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope, FaPla
 import skillsCard from '../../assets/cards/skills.png';
 import experienceCard from '../../assets/cards/experience.svg';
 import certificationsCard from '../../assets/cards/certifications.png';
-import projectsCard from '../../assets/cards/projects.svg';
+import projectsCard from '../../assets/cards/projects.png';
 import contactCard from '../../assets/cards/contact.svg';
 import { ProfileType } from '../../data/profiles';
 
