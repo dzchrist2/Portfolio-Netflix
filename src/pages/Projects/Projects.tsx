@@ -42,8 +42,8 @@ const Projects: React.FC = () => {
                         </a>
                     )}
                     {project.liveUrl && (
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={`${project.title} live site`}>
-                            <FaExternalLinkAlt /> Live
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={`${project.title} ${project.liveUrlLabel ?? 'live site'}`}>
+                            <FaExternalLinkAlt /> {project.liveUrlLabel ?? 'Live'}
                         </a>
                     )}
                 </div>

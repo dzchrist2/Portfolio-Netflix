@@ -2,18 +2,22 @@
     {
         "slug": "capsule-network-research",
         "title": "Capsule Network Research",
-        "description": "Independent research project exploring capsule networks as an alternative to CNNs for image classification, evaluating their ability to preserve spatial hierarchies and pose information between features.",
-        "longDescription": "Independent research project exploring capsule networks as an alternative to convolutional neural networks for image classification. Capsule networks encode both the presence and the pose (position, orientation, scale) of a feature, using dynamic routing-by-agreement between capsule layers instead of max-pooling. The project implemented a capsule network in TensorFlow, benchmarked it against a comparable CNN on the same dataset, and evaluated how well each preserved spatial hierarchies between parts and wholes under viewpoint changes.",
+        "description": "Barrett Honors College thesis exploring capsule networks as an alternative to CNNs for image classification, evaluating their ability to preserve spatial hierarchies and pose information between features.",
+        "longDescription": "Barrett Honors College undergraduate thesis exploring capsule networks as an alternative to convolutional neural networks for image classification. Capsule networks encode both the presence and the pose (position, orientation, scale) of a feature, using dynamic routing-by-agreement between capsule layers instead of max-pooling. The project implemented a capsule network in TensorFlow, benchmarked it against a comparable CNN on the same dataset, and evaluated how well each preserved spatial hierarchies between parts and wholes under viewpoint changes. The full thesis is published in ASU’s KEEP digital repository.",
         "imageKey": "capsuleNetwork",
-        "techUsed": ["Python", "TensorFlow"]
+        "techUsed": ["Python", "TensorFlow"],
+        "liveUrl": "https://keep.lib.asu.edu/items/193243",
+        "liveUrlLabel": "Thesis"
     },
     {
         "slug": "astro-seed-crop-health-classifier",
         "title": "Astro Seed — Crop Health Classifier",
-        "description": "A machine learning model that classifies crop health from leaf imagery to help identify plant disease early, built as part of an agriculture-tech research effort.",
-        "longDescription": "A machine learning model that classifies crop health from leaf imagery to help identify plant disease early, built as part of an agriculture-tech research effort. The model was trained on labeled leaf-image datasets and evaluated across multiple architectures (built in both TensorFlow and PyTorch) to compare accuracy and inference speed trade-offs for a future field-deployable, low-power classifier.",
+        "description": "University partnership with Astro Seed to build a machine learning model that classifies crop health from leaf imagery, helping identify plant disease early for agriculture-tech applications.",
+        "longDescription": "Built in partnership with Astro Seed during university as part of an agriculture-tech research effort. Designed, trained, and evaluated a machine learning model that classifies crop health from leaf imagery to help identify nutritional deficiencies and disease early. Compared multiple architectures in TensorFlow and PyTorch for accuracy and inference-speed trade-offs toward a future field-deployable, low-power classifier. Also developed a remote data pipeline for large crop-image datasets and managed delivery through scrum. Source code is proprietary to the company partnership and is not publicly available.",
         "imageKey": "astroSeed",
-        "techUsed": ["Python", "TensorFlow", "PyTorch"]
+        "techUsed": ["Python", "TensorFlow", "PyTorch"],
+        "liveUrl": "https://astroseed.net/",
+        "liveUrlLabel": "Website"
     },
     {
         "slug": "eit-research-arduino-sensing-device",

@@ -7,6 +7,7 @@ export interface Project {
     techUsed: string[];
     githubUrl?: string;
     liveUrl?: string;
+    liveUrlLabel?: string;
 }
 
 export interface ExperienceItem {

@@ -1,7 +1,7 @@
 import { Project } from '../types';
 import raw from '../content/projects.json';
 import capsuleNetworkImg from '../assets/projects/capsule-network.svg';
-import astroSeedImg from '../assets/projects/astro-seed.svg';
+import astroSeedImg from '../assets/projects/astro-seed.png';
 import eitResearchImg from '../assets/projects/eit-research.svg';
 import portfolioNetflixImg from '../assets/projects/portfolio-netflix.svg';
 
