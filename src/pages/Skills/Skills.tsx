@@ -1,25 +1,29 @@
 import React, { JSX } from 'react';
 import './Skills.css';
-import { FaReact, FaNodeJs, FaPython, FaJava } from 'react-icons/fa';
-import { SiTypescript, SiJavascript } from 'react-icons/si';
-import { LuBrainCircuit } from "react-icons/lu";
-import { MdOutlineWeb, MdOutlineWebStories } from "react-icons/md";
-import { PiFileCSharp } from "react-icons/pi";
+import { FaReact, FaNodeJs, FaPython, FaJava, FaAws, FaDatabase } from 'react-icons/fa';
+import { SiTypescript, SiJavascript, SiSupabase, SiTensorflow, SiKeras, SiTableau } from 'react-icons/si';
+import { LuBrainCircuit } from 'react-icons/lu';
+import { MdOutlineWeb, MdOutlineWebStories, MdOutlineSmartToy } from 'react-icons/md';
 import { usePageTitle } from '../../hooks/usePageTitle';
 import { skillsByCategory } from '../../data/skills';
-
 
 const iconMap: { [key: string]: JSX.Element } = {
     FaNodeJs: <FaNodeJs />,
     FaJava: <FaJava />,
     FaReact: <FaReact />,
+    FaPython: <FaPython />,
+    FaAws: <FaAws />,
+    FaDatabase: <FaDatabase />,
     SiTypescript: <SiTypescript />,
     SiJavascript: <SiJavascript />,
+    SiSupabase: <SiSupabase />,
+    SiTensorflow: <SiTensorflow />,
+    SiKeras: <SiKeras />,
+    SiTableau: <SiTableau />,
     LuBrainCircuit: <LuBrainCircuit />,
     MdOutlineWeb: <MdOutlineWeb />,
     MdOutlineWebStories: <MdOutlineWebStories />,
-    FaPython: <FaPython />,
-    PiFileCSharp: <PiFileCSharp />
+    MdOutlineSmartToy: <MdOutlineSmartToy />,
 };
 
 const Skills: React.FC = () => {

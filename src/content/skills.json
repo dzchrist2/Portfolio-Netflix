@@ -1,17 +1,26 @@
 {
     "Domains": [
-        { "title": "AI/ML", "description": "Modern and Classical AI and Machine Learning Techniques", "icon": "LuBrainCircuit" },
-        { "title": "Web-Development", "description": "Developing Modern, Dynamic Websites", "icon": "MdOutlineWeb" }
+        { "title": "AI/ML", "description": "Applied machine learning from research to production", "icon": "LuBrainCircuit" },
+        { "title": "Full-Stack Web", "description": "End-to-end web apps, from UI to APIs and data", "icon": "MdOutlineWeb" },
+        { "title": "LLM Integration", "description": "Prompt engineering and AI features in real products", "icon": "MdOutlineSmartToy" }
     ],
     "Frontend": [
-        { "title": "HTML & CSS", "description": "Web Markup and Styling", "icon": "MdOutlineWebStories" },
-        { "title": "JavaScript", "description": "Scripting Language", "icon": "SiJavascript" },
-        { "title": "TypeScript", "description": "Type-safe Scripting", "icon": "SiTypescript" },
-        { "title": "React", "description": "Frontend Framework", "icon": "FaReact" }
+        { "title": "React", "description": "Component-driven UI development", "icon": "FaReact" },
+        { "title": "TypeScript", "description": "Type-safe frontend and application code", "icon": "SiTypescript" },
+        { "title": "HTML & CSS", "description": "Semantic markup and modern styling", "icon": "MdOutlineWebStories" },
+        { "title": "JavaScript", "description": "Core language for the web platform", "icon": "SiJavascript" }
     ],
-    "Backend": [
-        { "title": "Python", "description": "Backend Language", "icon": "FaPython" },
-        { "title": "Java", "description": "Object Oriented Programming", "icon": "FaJava" },
-        { "title": "C#", "description": "Backend Language", "icon": "PiFileCSharp" }
+    "Backend & Cloud": [
+        { "title": "Node.js", "description": "Server-side JavaScript and APIs", "icon": "FaNodeJs" },
+        { "title": "Python", "description": "Backend, scripting, and ML tooling", "icon": "FaPython" },
+        { "title": "Java", "description": "Object-oriented application development", "icon": "FaJava" },
+        { "title": "Supabase", "description": "Backend-as-a-service, auth, and Postgres", "icon": "SiSupabase" },
+        { "title": "AWS", "description": "Cloud infrastructure and deployment", "icon": "FaAws" },
+        { "title": "SQL", "description": "Relational data modeling and queries", "icon": "FaDatabase" }
+    ],
+    "AI / Data": [
+        { "title": "TensorFlow", "description": "Deep learning model development", "icon": "SiTensorflow" },
+        { "title": "Keras", "description": "High-level neural network APIs", "icon": "SiKeras" },
+        { "title": "Tableau", "description": "Data visualization and dashboards", "icon": "SiTableau" }
     ]
 }
