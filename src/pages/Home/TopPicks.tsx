@@ -6,7 +6,7 @@ import skillsCard from '../../assets/cards/skills.png';
 import experienceCard from '../../assets/cards/experience.png';
 import certificationsCard from '../../assets/cards/certifications.png';
 import projectsCard from '../../assets/cards/projects.png';
-import contactCard from '../../assets/cards/contact.svg';
+import contactCard from '../../assets/cards/contact.png';
 import { ProfileType } from '../../data/profiles';
 
 interface TopPicksProps {
