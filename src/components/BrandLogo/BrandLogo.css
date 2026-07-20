@@ -13,14 +13,15 @@
 
 .brand-logo__char {
   display: inline-block;
-  /* Pull letters tight like the Netflix wordmark */
-  margin-inline: -0.035em;
+  margin-inline: -0.01em;
   transform-origin: center bottom;
   will-change: transform;
 }
 
 .brand-logo__char--space {
-  margin-inline: 0.08em;
+  margin-inline: 0;
+  width: 0.2em;
+  overflow: hidden;
 }
 
 .brand-logo--nav {
@@ -33,11 +34,11 @@
 }
 
 .brand-logo--hero .brand-logo__char {
-  margin-inline: -0.045em;
+  margin-inline: -0.015em;
 }
 
 .brand-logo--hero .brand-logo__char--space {
-  margin-inline: 0.1em;
+  width: 0.22em;
 }
 
 @media (max-width: 768px) {
