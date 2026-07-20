@@ -3,6 +3,7 @@ import './Contact.css';
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
 import { usePageTitle } from '../../hooks/usePageTitle';
 import { getProfile, getStoredProfile } from '../../data/profiles';
+import headshot from '../../assets/profile/headshot.png';
 
 const badgeCopy = {
     recruiter: "Results-driven software developer with a computer science degree from Barrett Honors College at ASU, looking for a team building cutting-edge products in AI, data science, or web development.",
@@ -20,8 +21,7 @@ const ContactMe: React.FC = () => {
     return (
         <div className="contact-container">
         <div className="linkedin-badge-custom">
-            {/* Placeholder avatar — swap for a real photo */}
-            <img src={profile.image} alt="Drew Christner" className="badge-avatar" />
+            <img src={headshot} alt="Drew Christner" className="badge-avatar" />
                 <div className="badge-content">
                 <h3 className="badge-name">Drew Christner</h3>
                 <p className="badge-description">
