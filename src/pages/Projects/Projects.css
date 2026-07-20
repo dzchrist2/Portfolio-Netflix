@@ -17,9 +17,16 @@
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(160, 16, 16, 0.6); /* Base shadow */
     opacity: 0;
-    animation: fadeInUp 0.5s forwards ease-in-out;
+    animation: projectFadeInUp 0.5s forwards ease-in-out;
     animation-delay: var(--delay);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card {
+        opacity: 1;
+        animation: none;
+    }
 }
 
 .project-card:hover {
@@ -121,4 +128,15 @@
 .project-link:hover,
 .project-link:focus-visible {
     text-decoration: underline;
+}
+
+@keyframes projectFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
