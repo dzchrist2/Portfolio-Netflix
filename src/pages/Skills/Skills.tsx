@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
             {Object.entries(skillsByCategory).map(([category, skills]) => (
                 <div className="skill-category" key={category}>
                     <h3 className="category-title">{category}</h3>
-                    <div className="skills-grid">
+                    <div className={`skills-grid skills-grid--${skills.length % 3 === 0 ? '3' : skills.length % 2 === 0 ? '2' : '3'}`}>
                         {skills.map((skill) => (
                             <div key={skill.title} className="skill-card">
                                 <div className="icon">{iconMap[skill.icon] || <FaReact />}</div>
@@ -41,11 +41,11 @@ const Skills: React.FC = () => {
                                     {skill.title.split('').map((letter: string, i: number) => (
                                         <span
                                             key={i}
-                                            className="letter"
+                                            className={`letter${letter === ' ' ? ' letter-space' : ''}`}
                                             aria-hidden="true"
                                             style={{ animationDelay: `${i * 0.05}s` }}
                                         >
-                                            {letter}
+                                            {letter === ' ' ? '\u00A0' : letter}
                                         </span>
                                     ))}
                                 </h3>

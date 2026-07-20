@@ -14,9 +14,30 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 20px;
+}
+
+.skills-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skills-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 700px) {
+    .skills-grid--3,
+    .skills-grid--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid--3,
+    .skills-grid--2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-card {
@@ -44,6 +65,7 @@
 .skill-name {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .letter {
@@ -51,6 +73,10 @@
     opacity: 0;
     transform: translateY(-20px);
     animation: dropIn 0.5s forwards ease-out;
+}
+
+.letter-space {
+    width: 0.35em;
 }
 
 @keyframes dropIn {
