@@ -4,7 +4,7 @@ import './TopPicks.css';
 import { FaCode, FaBriefcase, FaCertificate, FaProjectDiagram, FaEnvelope, FaPlayCircle } from 'react-icons/fa';
 import skillsCard from '../../assets/cards/skills.png';
 import experienceCard from '../../assets/cards/experience.svg';
-import certificationsCard from '../../assets/cards/certifications.svg';
+import certificationsCard from '../../assets/cards/certifications.png';
 import projectsCard from '../../assets/cards/projects.svg';
 import contactCard from '../../assets/cards/contact.svg';
 import { ProfileType } from '../../data/profiles';
