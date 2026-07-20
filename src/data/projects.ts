@@ -1,9 +1,9 @@
 import { Project } from '../types';
 import raw from '../content/projects.json';
-import capsuleNetworkImg from '../assets/projects/capsule-network.svg';
+import capsuleNetworkImg from '../assets/projects/capsule-network.png';
 import astroSeedImg from '../assets/projects/astro-seed.png';
-import eitResearchImg from '../assets/projects/eit-research.svg';
-import portfolioNetflixImg from '../assets/projects/portfolio-netflix.svg';
+import eitResearchImg from '../assets/projects/eit-research.png';
+import portfolioNetflixImg from '../assets/projects/portfolio-netflix.png';
 
 // Images are bundled Vite assets and can't be referenced by path from JSON,
 // so JSON content carries an `imageKey` that maps to the imported asset here.
